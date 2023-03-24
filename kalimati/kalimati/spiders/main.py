@@ -5,9 +5,6 @@ class KalimatiScraper(scrapy.Spider):
     name = "kalimati"
     start_urls = ['https://kalimatimarket.gov.np/price']
 
-    
-
-    
 
     def parse(self, response):
         
