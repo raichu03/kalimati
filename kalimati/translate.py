@@ -6,18 +6,18 @@ from googletrans import *
 # making the instance og google trnaslator class 
 translator = googletrans.Translator()
 
-with open('scrapedData/3-24.csv') as file:
+with open('scrapedData/4-01.csv') as file:
     lines = csv.reader(file, delimiter=',')
     line_length = 0
     for line in lines:
 
         if line_length == 0:
            line_length += 1
-           with open('cleanData/2023-3-24.csv',mode='w') as tfile:
+           with open('cleanData/2023-4-01.csv',mode='w') as tfile:
                writer = csv.writer(tfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                writer.writerow(line)
 
-        # if line_length <= 80:
+        # if line_length <= 86:
         #     line_length +=1
 
 
@@ -31,7 +31,7 @@ with open('scrapedData/3-24.csv') as file:
             # break
 
 
-            with open('cleanData/2023-3-24.csv',mode='a') as tfile:
+            with open('cleanData/2023-4-01.csv',mode='a') as tfile:
                 writer = csv.writer(tfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                 writer.writerow([line[0],minprice,maxprice,avgprice])
 
